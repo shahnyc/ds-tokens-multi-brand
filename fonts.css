@@ -11,9 +11,9 @@
 
 @font-face {
   font-family: 'Satoshi Variable';
-  src: url('../fonts/satoshi/Satoshi-Variable.woff2') format('woff2'),
-       url('../fonts/satoshi/Satoshi-Variable.woff') format('woff'),
-       url('../fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
+  src: url('./fonts/satoshi/Satoshi-Variable.woff2') format('woff2'),
+       url('./fonts/satoshi/Satoshi-Variable.woff') format('woff'),
+       url('./fonts/satoshi/Satoshi-Variable.ttf') format('truetype');
   font-weight: 300 900;
   font-display: swap;
   font-style: normal;
@@ -21,9 +21,9 @@
 
 @font-face {
   font-family: 'Satoshi-VariableItalic';
-  src: url('../fonts/satoshi/Satoshi-VariableItalic.woff2') format('woff2'),
-       url('../fonts/satoshi/Satoshi-VariableItalic.woff') format('woff'),
-       url('../fonts/satoshi/Satoshi-VariableItalic.ttf') format('truetype');
+  src: url('./fonts/satoshi/Satoshi-VariableItalic.woff2') format('woff2'),
+       url('./fonts/satoshi/Satoshi-VariableItalic.woff') format('woff'),
+       url('./fonts/satoshi/Satoshi-VariableItalic.ttf') format('truetype');
   font-weight: 300 900;
   font-display: swap;
   font-style: italic;
@@ -35,9 +35,9 @@
 
 @font-face {
   font-family: 'Zodiak Variable';
-  src: url('../fonts/zodiak/Zodiak-Variable.woff2') format('woff2'),
-       url('../fonts/zodiak/Zodiak-Variable.woff') format('woff'),
-       url('../fonts/zodiak/Zodiak-Variable.ttf') format('truetype');
+  src: url('./fonts/zodiak/Zodiak-Variable.woff2') format('woff2'),
+       url('./fonts/zodiak/Zodiak-Variable.woff') format('woff'),
+       url('./fonts/zodiak/Zodiak-Variable.ttf') format('truetype');
   font-weight: 100 900;
   font-display: swap;
   font-style: normal;
@@ -45,9 +45,9 @@
 
 @font-face {
   font-family: 'Zodiak-VariableItalic';
-  src: url('../fonts/zodiak/Zodiak-VariableItalic.woff2') format('woff2'),
-       url('../fonts/zodiak/Zodiak-VariableItalic.woff') format('woff'),
-       url('../fonts/zodiak/Zodiak-VariableItalic.ttf') format('truetype');
+  src: url('./fonts/zodiak/Zodiak-VariableItalic.woff2') format('woff2'),
+       url('./fonts/zodiak/Zodiak-VariableItalic.woff') format('woff'),
+       url('./fonts/zodiak/Zodiak-VariableItalic.ttf') format('truetype');
   font-weight: 100 900;
   font-display: swap;
   font-style: italic;
@@ -83,9 +83,9 @@
 
 @font-face {
   font-family: 'GeneralSans-Variable';
-  src: url('../fonts/general-sans/GeneralSans-Variable.woff2') format('woff2'),
-       url('../fonts/general-sans/GeneralSans-Variable.woff') format('woff'),
-       url('../fonts/general-sans/GeneralSans-Variable.ttf') format('truetype');
+  src: url('./fonts/general-sans/GeneralSans-Variable.woff2') format('woff2'),
+       url('./fonts/general-sans/GeneralSans-Variable.woff') format('woff'),
+       url('./fonts/general-sans/GeneralSans-Variable.ttf') format('truetype');
   font-weight: 200 700;
   font-display: swap;
   font-style: normal;
