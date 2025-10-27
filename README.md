@@ -4,6 +4,7 @@ This demo showcases a white-label design system that supports multiple brands wi
 
 
 
+<a href="https://shahnyc.github.io/ds-tokens-multi-brand/" target="_blank">Demo Link</a>
 
 ---
 ## 🎨 Component-Level Tokens: Real Brand Differentiation
@@ -25,7 +26,7 @@ This demo uses **component-level design tokens** (not just semantic color tokens
 **Switch between brands to see dramatic visual differences** - buttons morph from pills to squares, fonts change completely, and the entire UI personality transforms!
 
 ---
-## Demo: https://shahnyc.github.io/ds-tokens-multi-brand/
+
 ## Quick Start
 Follow these 5 steps to run the demo locally:
 
