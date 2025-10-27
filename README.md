@@ -1,7 +1,11 @@
-# Multi-Brand Design System Demo
+# Multi-Brand Design Token Demo
 
 This demo showcases a white-label design system that supports multiple brands with light and dark modes, all powered by CSS custom properties and class-based theme switching.
 
+
+https://shahnyc.github.io/ds-tokens-multi-brand/
+
+---
 ## 🎨 Component-Level Tokens: Real Brand Differentiation
 
 This demo uses **component-level design tokens** (not just semantic color tokens) to create **real visual variety** between brands:
