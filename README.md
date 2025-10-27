@@ -3,7 +3,7 @@
 This demo showcases a white-label design system that supports multiple brands with light and dark modes, all powered by CSS custom properties and class-based theme switching.
 
 
-https://shahnyc.github.io/ds-tokens-multi-brand/
+
 
 ---
 ## 🎨 Component-Level Tokens: Real Brand Differentiation
@@ -25,10 +25,9 @@ This demo uses **component-level design tokens** (not just semantic color tokens
 **Switch between brands to see dramatic visual differences** - buttons morph from pills to squares, fonts change completely, and the entire UI personality transforms!
 
 ---
-
+## Demo: https://shahnyc.github.io/ds-tokens-multi-brand/
 ## Quick Start
-
-Follow these 5 steps to run the demo:
+Follow these 5 steps to run the demo locally:
 
 ### 1. **Navigate to the project root**
 ```bash
@@ -47,7 +46,7 @@ npx http-server -p 8080
 
 ### 4. **Open the demo in your browser**
 ```
-http://localhost:8080/demo/
+http://localhost:8080
 ```
 
 ### 5. **Test theme switching**
