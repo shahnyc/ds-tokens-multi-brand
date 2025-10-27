@@ -1,0 +1,16 @@
+{
+  "name": "multi-brand-tokens",
+  "version": "0.0.1",
+  "description": "Transform tokens demo project",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "color2k": "^2.0.0",
+    "expr-eval": "^2.0.2",
+    "fs": "^0.0.1-security",
+    "lodash": "^4.17.21",
+    "style-dictionary": "^3.7.0"
+  },
+  "license": "MIT"
+}

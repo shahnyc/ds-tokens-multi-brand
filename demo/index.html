@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="Headless-base Brand-A-Lightmode">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Brand Design System Demo</title>
+  
+  <!-- Load fonts first -->
+  <link rel="stylesheet" href="fonts.css">
+  
+  <!-- Load all CSS files once (no dynamic swapping) -->
+  <link rel="stylesheet" href="../dist/css/Headless-base.css">
+  <link rel="stylesheet" href="../dist/css/Brand-A-Lightmode.css">
+  <link rel="stylesheet" href="../dist/css/Brand-A-Darkmode.css">
+  <link rel="stylesheet" href="../dist/css/Brand-B-Lightmode.css">
+  <link rel="stylesheet" href="../dist/css/Brand-B-Darkmode.css">
+  <link rel="stylesheet" href="../dist/css/Brand-C-Lightmode.css">
+  <link rel="stylesheet" href="../dist/css/Brand-C-Darkmode.css">
+  <link rel="stylesheet" href="../dist/css/Brand-I-Lightmode.css">
+  <link rel="stylesheet" href="../dist/css/Brand-I-Darkmode.css">
+  
+  <!-- Demo-specific styles -->
+  <link rel="stylesheet" href="preview.css">
+</head>
+<body>
+  
+  <!-- Theme Toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-content">
+      <div class="toolbar-title">
+        <h1>Multi-Brand Design System</h1>
+        <p>Component-level tokens • Toggle classes on <code>&lt;html&gt;</code> to switch themes</p>
+      </div>
+      
+      <div class="toolbar-controls">
+        <div class="control-group">
+          <label for="brand-select">Brand</label>
+          <select id="brand-select" class="theme-select">
+            <option value="Brand-A">Brand A</option>
+            <option value="Brand-B">Brand B</option>
+            <option value="Brand-C">Brand C</option>
+            <option value="Brand-I">Brand I</option>
+          </select>
+        </div>
+        
+        <div class="control-group">
+          <label for="mode-select">Mode</label>
+          <select id="mode-select" class="theme-select">
+            <option value="Lightmode">Light</option>
+            <option value="Darkmode">Dark</option>
+          </select>
+        </div>
+        
+        <div class="control-group">
+          <div class="current-classes">
+            Classes: <code id="current-classes-display">Brand-A-Lightmode</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demo Content -->
+  <main class="demo-content">
+    
+    <!-- Component Preview Card -->
+    <section class="preview-section">
+      <h2 class="section-title">Component Preview</h2>
+      
+      <div class="demo-card">
+        <div class="card-header">
+          <h3 class="card-title">Design Tokens Demo</h3>
+          <span class="card-badge">New</span>
+        </div>
+        
+        <div class="card-body">
+          <p class="card-text">
+            This demo showcases multi-brand theming using <strong>component-level design tokens</strong>. 
+            Each brand has a unique personality expressed through different border radii, fonts, 
+            and component styling - not just colors!
+          </p>
+          
+          <p class="card-text-muted">
+            <strong>Try switching brands:</strong> Watch buttons morph from pill-shaped (Brand A: 100px) 
+            to sharp corners (Brand B: 0px). Notice how fonts change from Satoshi to Zodiak to IBM Plex. 
+            All themes are loaded once, and switching happens instantly via CSS class changes on <code>&lt;html&gt;</code>.
+          </p>
+        </div>
+        
+        <div class="card-actions">
+          <button class="btn-cta">Get Started</button>
+          <button class="btn-primary">Learn More</button>
+       
+        </div>
+        
+        <div class="card-footer">
+          <div class="status-item status-info">
+          
+            <span>Info message example</span>
+          </div>
+          <div class="status-item status-warning">
+           
+            <span>Warning message example</span>
+          </div>
+          <div class="status-item status-error">
+            
+            <span>Error message example</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Component Token Showcase -->
+    <section class="preview-section">
+      <h2 class="section-title">Component-Level Token Variations</h2>
+      
+      <div class="token-showcase-grid">
+        <div class="token-showcase-card">
+          <h3 class="token-showcase-title">Button Styling</h3>
+          <div class="token-item">
+            <span class="token-label">Border Radius:</span>
+            <code class="token-code" id="btn-radius-value">--button-border-radius</code>
+          </div>
+          <div class="token-item">
+            <span class="token-label">Font Family:</span>
+            <code class="token-code" id="btn-font-value">--button-font-family</code>
+          </div>
+          <div class="token-item">
+            <span class="token-label">Border Width:</span>
+            <code class="token-code" id="btn-border-width-value">--button-border-width</code>
+          </div>
+          <div class="token-visual">
+            <button class="sample-btn">Sample Button</button>
+          </div>
+        </div>
+
+        <div class="token-showcase-card">
+          <h3 class="token-showcase-title">Typography</h3>
+          <div class="token-item">
+            <span class="token-label">Heading Font:</span>
+            <code class="token-code" id="heading-font-value">--heading-sans-serif-font-family</code>
+          </div>
+          <div class="token-item">
+            <span class="token-label">Body Font:</span>
+            <code class="token-code" id="body-font-value">--body-sans</code>
+          </div>
+          <div class="token-item">
+            <span class="token-label">Heading Size (M):</span>
+            <code class="token-code" id="heading-size-value">--heading-m-font-size</code>
+          </div>
+          <div class="token-visual">
+            <h3 class="sample-heading">Sample Heading</h3>
+            <p class="sample-body">Sample body text using component tokens.</p>
+          </div>
+        </div>
+
+        <div class="token-showcase-card">
+          <h3 class="token-showcase-title">Tags</h3>
+          <div class="token-item">
+            <span class="token-label">Border Radius:</span>
+            <code class="token-code" id="tag-radius-value">--tag-border-radius</code>
+          </div>
+          <div class="token-item">
+            <span class="token-label">Font Family:</span>
+            <code class="token-code" id="tag-font-value">--tag-font-family</code>
+          </div>
+          <div class="token-item">
+            <span class="token-label">Font Weight:</span>
+            <code class="token-code" id="tag-weight-value">--tag-font-weight</code>
+          </div>
+          <div class="token-visual">
+            <div class="sample-tags">
+              <span class="sample-tag tag-info">Info</span>
+              <span class="sample-tag tag-warning">Warning</span>
+              <span class="sample-tag tag-error">Error</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Color Swatch Grid -->
+    <section class="preview-section">
+      <h2 class="section-title">Semantic Color Tokens</h2>
+      
+      <div class="swatch-grid">
+        <!-- Foreground Colors -->
+        <div class="swatch-group">
+          <h3 class="swatch-group-title">Foreground</h3>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-fg-default);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">fg-default</span>
+              <span class="swatch-value" data-var="--semantic-fg-default"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-fg-muted);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">fg-muted</span>
+              <span class="swatch-value" data-var="--semantic-fg-muted"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-fg-subtle);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">fg-subtle</span>
+              <span class="swatch-value" data-var="--semantic-fg-subtle"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-fg-accent);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">fg-accent</span>
+              <span class="swatch-value" data-var="--semantic-fg-accent"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Background Colors -->
+        <div class="swatch-group">
+          <h3 class="swatch-group-title">Background</h3>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-bg-surface);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">bg-surface</span>
+              <span class="swatch-value" data-var="--semantic-bg-surface"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-bg-muted);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">bg-muted</span>
+              <span class="swatch-value" data-var="--semantic-bg-muted"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-bg-subtle);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">bg-subtle</span>
+              <span class="swatch-value" data-var="--semantic-bg-subtle"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-bg-canvas);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">bg-canvas</span>
+              <span class="swatch-value" data-var="--semantic-bg-canvas"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Colors -->
+        <div class="swatch-group">
+          <h3 class="swatch-group-title">Call to Action</h3>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-cta-default);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">cta-default</span>
+              <span class="swatch-value" data-var="--semantic-cta-default"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-cta-emphasised);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">cta-emphasised</span>
+              <span class="swatch-value" data-var="--semantic-cta-emphasised"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-cta-muted);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">cta-muted</span>
+              <span class="swatch-value" data-var="--semantic-cta-muted"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-cta-subtle);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">cta-subtle</span>
+              <span class="swatch-value" data-var="--semantic-cta-subtle"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Primary Colors -->
+        <div class="swatch-group">
+          <h3 class="swatch-group-title">Primary</h3>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-primary-default);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">primary-default</span>
+              <span class="swatch-value" data-var="--semantic-primary-default"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-primary-emphasised);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">primary-emphasised</span>
+              <span class="swatch-value" data-var="--semantic-primary-emphasised"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-primary-muted);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">primary-muted</span>
+              <span class="swatch-value" data-var="--semantic-primary-muted"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-primary-subtle);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">primary-subtle</span>
+              <span class="swatch-value" data-var="--semantic-primary-subtle"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Status Colors -->
+        <div class="swatch-group">
+          <h3 class="swatch-group-title">Status</h3>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-info-fg);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">info-fg</span>
+              <span class="swatch-value" data-var="--semantic-info-fg"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-warning-fg);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">warning-fg</span>
+              <span class="swatch-value" data-var="--semantic-warning-fg"></span>
+            </div>
+          </div>
+          <div class="swatch">
+            <div class="swatch-color" style="background-color: var(--semantic-error-fg);"></div>
+            <div class="swatch-info">
+              <span class="swatch-name">error-fg</span>
+              <span class="swatch-value" data-var="--semantic-error-fg"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Load theme toggle script -->
+  <script src="theme-toggle.js"></script>
+</body>
+</html>
+
